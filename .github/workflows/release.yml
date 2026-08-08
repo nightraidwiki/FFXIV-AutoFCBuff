@@ -1,0 +1,50 @@
+name: Build and Release Plugin
+
+on:
+  push:
+    tags:
+      - 'v*'
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Build Plugin
+        run: dotnet build -c Release AutoFCBuff/AutoFCBuff.csproj
+
+      - name: Create Zip Package
+        shell: pwsh
+        run: |
+          $outputPath = "AutoFCBuff/bin/Release/net8.0-windows"
+          if (-not (Test-Path $outputPath)) {
+              $outputPath = "AutoFCBuff/bin/Release"
+          }
+          Compress-Archive -Path "$outputPath/*" -DestinationPath "latest.zip" -Force
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: latest.zip
+          path: latest.zip
+
+      - name: Release on Tag Push
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: latest.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

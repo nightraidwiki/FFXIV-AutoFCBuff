@@ -1,0 +1,19 @@
+<Project>
+
+  <PropertyGroup Label="Identity">
+    <Version>1.0.0.2</Version>
+    <Authors>Gemxu</Authors>
+    <Copyright>Copyright (c) Gemxu</Copyright>
+    <PackageProjectUrl>https://github.com/nightraidwiki/FFXIV-AutoFCBuff</PackageProjectUrl>
+    <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/nightraidwiki/FFXIV-AutoFCBuff</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <NeutralLanguage>en-US</NeutralLanguage>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Determinism" Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+
+</Project>
