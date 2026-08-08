@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/goatcorp/Dalamud/master/Dalamud/Configuration/PluginManifest/pluginmanifest.schema.json",
+  "Author": "Gemxu",
+  "Name": "Auto FC Buffs",
+  "InternalName": "AutoFCBuff",
+  "AssemblyVersion": "1.0.0.0",
+  "Description": "Automates buying Free Company buffs (Company Actions) from Grand Company quartermasters based on FC affiliation and current stock.",
+  "ApplicableVersion": "any",
+  "DalamudApiLevel": 15,
+  "Punchline": "Automates Free Company buff purchases from Grand Company Quartermasters.",
+  "RepoUrl": "https://github.com/nightraidwiki/FFXIV-AutoFCBuff",
+  "Tags": [
+    "fc",
+    "buff",
+    "automation",
+    "utility"
+  ],
+  "CategoryTags": [
+    "utility"
+  ],
+  "AcceptsFeedback": true
+}
