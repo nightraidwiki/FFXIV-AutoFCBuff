@@ -1,0 +1,13 @@
+# User excluded files/directories
+agy.txt
+FFXIV-AutoDailyTribes/
+VERMAXION-0.3.1.13/
+
+# Visual Studio / Build outputs
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates

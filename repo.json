@@ -1,0 +1,30 @@
+[
+  {
+    "Author": "Gemxu",
+    "Name": "Auto FC Buffs",
+    "InternalName": "AutoFCBuff",
+    "AssemblyVersion": "1.0.0.1",
+    "TestingAssemblyVersion": "1.0.0.1",
+    "Description": "Automates buying Free Company buffs (Company Actions) from Grand Company quartermasters based on FC affiliation and current stock.",
+    "Punchline": "Automates Free Company buff purchases from Grand Company Quartermasters.",
+    "RepoUrl": "https://github.com/nightraidwiki/FFXIV-AutoFCBuff",
+    "ApplicableVersion": "any",
+    "Tags": [
+      "fc",
+      "buff",
+      "automation",
+      "utility"
+    ],
+    "CategoryTags": [
+      "utility"
+    ],
+    "DalamudApiLevel": 15,
+    "DownloadLinkInstall": "https://github.com/nightraidwiki/FFXIV-AutoFCBuff/releases/download/v1.0.0.1/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/nightraidwiki/FFXIV-AutoFCBuff/releases/download/v1.0.0.1/latest.zip",
+    "DownloadLinkTesting": "https://github.com/nightraidwiki/FFXIV-AutoFCBuff/releases/download/v1.0.0.1/latest.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "LoadPriority": 0,
+    "AcceptsFeedback": true
+  }
+]
